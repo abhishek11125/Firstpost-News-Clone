@@ -12,7 +12,6 @@ Project involves use of some news api's for cloning and frontend technologies as
 
  - [Awesome Readme Templates](https://readme.so/editor)
  - [For Awsome Icons](https://fontawesome.com/icons)
- - [How to write a Good readme](https://www.youtube.com/watch?v=Rtpu2cWz7W8&t=253s)
  - [Getting headlines and live news](https://mediastack.com/documentation)
  
 
