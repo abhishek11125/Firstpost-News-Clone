@@ -12,7 +12,7 @@ Project involves use of some news api's for cloning and frontend technologies as
 
  - [Awesome Readme Templates](https://readme.so/editor)
  - [For Awsome Icons](https://fontawesome.com/icons)
- - [Getting headlines and live news](https://mediastack.com/documentation)
+ - [Getting headlines and live news](https://newsdata.io/docs)
  
 
 
@@ -21,28 +21,24 @@ Project involves use of some news api's for cloning and frontend technologies as
 #### Get Searched News
 
 ```http
-  https://api.mediastack.com/v1/news
-    ? access_key = YOUR_ACCESS_KEY & search = abc
+  https://newsdata.io/api/1/archive?apikey=YOUR_API_KEY&q=social
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `api_key` | `string` | **Required**. Your API key |
-| `access_key`|`string`|**Required** Use this parameter to specify your unique API access key, which is shown when you log in to your account dashboard.|
-| `search`  |`string`|**Required** Use this parameter to specify one or multiple search keywords.|
+| `q`  |`string`|**Required** Use this parameter to specify one or multiple search keywords.|
 
 #### Get News According To Categories
 
 ```http
-  https://api.mediastack.com/v1/news
-    ? access_key = YOUR_ACCESS_KEY
-    & categories = health,-sports
+  https://newsdata.io/api/1/news?apikey=YOUR_API_KEY&category=sports,health
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-|`access_key`| `string`|**Required** Use this parameter to specify your unique API access key, which is shown when you log in to your account dashboard.|
-| `categories`      | `string` | [Optional] Use this parameter to include or exclude one or multiple comma-separated news categories. Example: To include business, but exclude sports: &sources=business,-sports. |
+|`YOUR_API_KEY`| `string`|**Required** Use this parameter to specify your unique API key, which is shown when you log in to your account dashboard.|
+| `category`      | `string` | [Optional] Use this parameter to include or exclude one or multiple comma-separated news categories. Example: To include business, but exclude sports: &sources=business,health. |
 
 
 
