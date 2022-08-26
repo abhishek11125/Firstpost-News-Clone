@@ -112,7 +112,7 @@ let appendNews=(data)=>{
         let box = document.createElement('div');
         box.addEventListener('click',function(){
             localStorage.setItem('news',JSON.stringify(el));
-            window.location.href = news.html;
+            window.location.href = 'news.html';
         });
         let box1 = document.createElement('div');
         let box2 = document.createElement('div');
@@ -149,7 +149,7 @@ let appendTrend=(data)=>{
       let box = document.createElement('div');
       box.addEventListener('click',function(){
         localStorage.setItem('news',JSON.stringify(el));
-        window.location.href = news.html;
+        window.location.href = 'news.html';
     });
 
       let image = document.createElement('img');
@@ -176,7 +176,7 @@ let appendSportsNews=(data)=>{
       let box = document.createElement('div');
       box.addEventListener('click',function(){
         localStorage.setItem('news',JSON.stringify(el));
-        window.location.href = news.html;
+        window.location.href = 'news.html';
     });
       let box1 = document.createElement('div');
       let box2 = document.createElement('div');
@@ -213,7 +213,7 @@ let appendEnt = (data)=>{
     let box = document.createElement('div');
     box.addEventListener('click',function(){
       localStorage.setItem('news',JSON.stringify(el));
-      window.location.href = news.html;
+      window.location.href = 'news.html';
   });
     let box1 = document.createElement('div');
     let box2 = document.createElement('div');
