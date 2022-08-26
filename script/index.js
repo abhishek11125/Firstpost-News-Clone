@@ -102,15 +102,18 @@ appendMore(more_data);
 
 let cont = document.getElementById('container1');
 let getNews = async()=>{
-    let res = await fetch('https://newsapi.org/v2/everything?q=india&from=2022-07-25&sortBy=general&apiKey=4b123186e4684376a2afbda4a3d430af&pageSize=10');
+    let res = await fetch('https://newsapi.org/v2/everything?q=india&from=2022-07-26&sortBy=general&apiKey=892d602a6ac34d3681e9586c79270aca&pageSize=10');
     let data = await res.json()
-    console.log(data)
     appendNews(data.articles)
 }
 let appendNews=(data)=>{
     
     data.forEach((el)=>{
         let box = document.createElement('div');
+        box.addEventListener('click',function(){
+            localStorage.setItem('news',JSON.stringify(el));
+            window.location.href = news.html;
+        });
         let box1 = document.createElement('div');
         let box2 = document.createElement('div');
 
@@ -134,9 +137,8 @@ getNews();
 let container2 =document.getElementById('container2');
 
 let getTerending= async()=>{
-  let res = await fetch('https://newsapi.org/v2/everything?q=india&from=2022-07-25&sortBy=popularity&apiKey=4b123186e4684376a2afbda4a3d430af&pageSize=6')
-  let data = await res.json()
-  console.log(data)
+  let res = await fetch('https://newsapi.org/v2/everything?q=india&from=2022-07-26&sortBy=publishedAt&apiKey=892d602a6ac34d3681e9586c79270aca&pageSize=6')
+  let data = await res.json();
   appendTrend(data.articles);
 
 }
@@ -145,6 +147,10 @@ getTerending()
 let appendTrend=(data)=>{
     data.forEach((el)=>{
       let box = document.createElement('div');
+      box.addEventListener('click',function(){
+        localStorage.setItem('news',JSON.stringify(el));
+        window.location.href = news.html;
+    });
 
       let image = document.createElement('img');
       image.src = el.urlToImage;
@@ -159,16 +165,19 @@ let appendTrend=(data)=>{
 }
 let container3 = document.getElementById('container3');
 let sportsData = async()=>{
-  let res = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=4b123186e4684376a2afbda4a3d430af&pageSize=10');
+  let res = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=892d602a6ac34d3681e9586c79270aca&pageSize=10');
   let data = await res.json(); 
-  console.log(data);
-  appendSportsNews(dara.articles);
+  appendSportsNews(data.articles);
 }
 
 let appendSportsNews=(data)=>{
     
   data.forEach((el)=>{
       let box = document.createElement('div');
+      box.addEventListener('click',function(){
+        localStorage.setItem('news',JSON.stringify(el));
+        window.location.href = news.html;
+    });
       let box1 = document.createElement('div');
       let box2 = document.createElement('div');
 
@@ -188,3 +197,38 @@ let appendSportsNews=(data)=>{
 }
 
 sportsData()
+
+let container4 = document.getElementById('container4');
+
+let entData = async() =>{
+  let res = await fetch('https://newsapi.org/v2/everything?q=bollywood&from=2022-07-26&sortBy=publishedAt&apiKey=892d602a6ac34d3681e9586c79270aca&pageSize=6');
+  let data = await res.json();
+  appendEnt(data.articles);
+}
+
+entData()
+
+let appendEnt = (data)=>{
+  data.forEach((el)=>{
+    let box = document.createElement('div');
+    box.addEventListener('click',function(){
+      localStorage.setItem('news',JSON.stringify(el));
+      window.location.href = news.html;
+  });
+    let box1 = document.createElement('div');
+    let box2 = document.createElement('div');
+
+    let pic = document.createElement('img');
+    pic.src = el.urlToImage
+
+    let title = document.createElement('h3');
+    title.innerText = el.title; 
+
+    let content = document.createElement('p');
+    content.innerText = el.description
+    box2.append(title,content)
+    box1.append(pic);
+    box.append(box1,box2)
+    container4.append(box);
+  });
+}

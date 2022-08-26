@@ -274,8 +274,98 @@
   margin-left: 20px;
 
 }
-
-
-
-
-
+#extra{
+  font-family: 'Playfair Display', serif;
+  padding: 10px;
+}
+#extra>img{
+  width: 100%;
+}
+#ex{
+  font-family: 'Playfair Display', serif;
+  text-decoration: underline;
+}
+.carousel2 .cd1>img{
+  height: 200px;
+  object-fit: cover;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cap{
+  height: 100px;
+}
+.cap>h5{
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+}
+#container3{
+  margin: 10px;
+  position: relative;
+  margin-bottom: 100px;
+}
+#container3>div:first-child{
+  cursor: pointer;
+}
+#container3>div>div:first-child>img{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+#container3>div>div:last-child>h3{
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  padding: 5px;
+}
+#container3>div>div:last-child{
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  margin-top: -120px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #efefef;
+  cursor: pointer;
+}
+#container3>div>div:last-child>p{
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 10px 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+#container4{
+  margin: 10px;
+  position: relative;
+  margin-bottom: 100px;
+}
+#container4>div:first-child{
+  cursor: pointer;
+}
+#container4>div>div:first-child>img{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+#container4>div>div:last-child>h3{
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  padding: 5px;
+}
+#container4>div>div:last-child{
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  margin-top: -120px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #efefef;
+  cursor: pointer;
+}
+#container4>div>div:last-child>p{
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  margin: 10px 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
