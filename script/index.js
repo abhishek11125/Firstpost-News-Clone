@@ -1,6 +1,6 @@
 //  Crausel effet
 $(".images").owlCarousel({
-  margin: 10,
+  margin: 100,
   loop: true,
   autoplay: true,
   autoplayTimeout: 3000,
@@ -10,6 +10,28 @@ $(".images").owlCarousel({
       items: 1,
       nav: false,
     },
+  },
+});
+
+$(".pics").owlCarousel({
+  margin:30 ,
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0:{
+      items: 1,
+      nav: false,
+    },
+    600:{
+      items: 2,
+      nav:false,
+    },
+    1000:{
+      items: 3,
+      nav:false,
+    }
   },
 });
 
@@ -108,3 +130,61 @@ let appendNews=(data)=>{
 }
 
 getNews();
+
+let container2 =document.getElementById('container2');
+
+let getTerending= async()=>{
+  let res = await fetch('https://newsapi.org/v2/everything?q=india&from=2022-07-25&sortBy=popularity&apiKey=4b123186e4684376a2afbda4a3d430af&pageSize=6')
+  let data = await res.json()
+  console.log(data)
+  appendTrend(data.articles);
+
+}
+getTerending()
+
+let appendTrend=(data)=>{
+    data.forEach((el)=>{
+      let box = document.createElement('div');
+
+      let image = document.createElement('img');
+      image.src = el.urlToImage;
+
+      let title = document.createElement('p');
+      title.innerText = el.title;
+
+      box.append(image,title);
+
+      container2.append(box);
+    })
+}
+let container3 = document.getElementById('container3');
+let sportsData = async()=>{
+  let res = await fetch('https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=4b123186e4684376a2afbda4a3d430af&pageSize=10');
+  let data = await res.json(); 
+  console.log(data);
+  appendSportsNews(dara.articles);
+}
+
+let appendSportsNews=(data)=>{
+    
+  data.forEach((el)=>{
+      let box = document.createElement('div');
+      let box1 = document.createElement('div');
+      let box2 = document.createElement('div');
+
+      let pic = document.createElement('img');
+      pic.src = el.urlToImage
+
+      let title = document.createElement('h3');
+      title.innerText = el.title; 
+
+      let content = document.createElement('p');
+      content.innerText = el.description
+      box2.append(title,content)
+      box1.append(pic);
+      box.append(box1,box2)
+      container3.append(box);
+  })
+}
+
+sportsData()
