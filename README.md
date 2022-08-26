@@ -21,7 +21,7 @@ Project involves use of some news api's for cloning and frontend technologies as
 #### Get Searched News
 
 ```http
-  https://newsdata.io/api/1/archive?apikey=YOUR_API_KEY&q=social
+  https://newsapi.org/v2/everything?q=bitcoin&apiKey=api_key
 ```
 
 | Parameter | Type     | Description                |
@@ -32,7 +32,7 @@ Project involves use of some news api's for cloning and frontend technologies as
 #### Get News According To Categories
 
 ```http
-  https://newsdata.io/api/1/news?apikey=YOUR_API_KEY&category=sports,health
+https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=api_key
 ```
 
 | Parameter | Type     | Description                       |
