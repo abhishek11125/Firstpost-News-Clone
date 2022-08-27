@@ -1,0 +1,32 @@
+#heading{
+    margin:20px auto;
+    width: fit-content;
+}
+#container{
+    display: flex;
+    border: 1px solid red;
+    width: 70%;
+    margin: auto;
+}
+#news{
+    border: 1px solid teal;
+    width: 60%;
+    
+}
+#side{
+ 
+    
+    border: 1px solid yellowgreen;
+    width:40%;
+   
+}
+.news_image{
+  width:600px;
+  height: 300px;
+}
+.sidebar{
+    width: 200px;
+}
+#image_long{
+    height:600px;
+}
