@@ -1,5 +1,5 @@
 let getData= async()=>{
-  let res=await fetch(`https://newsapi.org/v2/everything?q=india&from=2022-07-27&sortBy=publishedAt&pagesize=10&apiKey=2b7bcb9907d246cd8cfbabb9967e29e1`);
+  // let res=await fetch(`https://newsapi.org/v2/everything?q=india&from=2022-07-27&sortBy=publishedAt&pagesize=10&apiKey=2b7bcb9907d246cd8cfbabb9967e29e1`);
   let data=await res.json();
   data=data.articles;
   console.log(data);
@@ -13,6 +13,9 @@ let append=(data)=>{
     let container=document.getElementById("news");
     data.forEach(el=> {
       let div=document.createElement("div");
+      div.addEventListener("click",function(){
+        localStorage.setItem("news",JSON.stringify(el));
+      })
       let image=document.createElement("img");
       image.className="news_image";
       image.src=el.urlToImage;

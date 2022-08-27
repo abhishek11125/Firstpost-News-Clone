@@ -4,20 +4,22 @@
 }
 #container{
     display: flex;
-    border: 1px solid red;
+    border: 1px solid none;
     width: 70%;
     margin: auto;
 }
 #news{
-    border: 1px solid teal;
-    width: 60%;
+    margin-top: 50px;
+    border: 1px solid none;
+    width: 600px;
     
 }
 #side{
  
-    
-    border: 1px solid yellowgreen;
-    width:40%;
+    font-family: 'Playfair Display', serif;
+    border: 1px solid none;
+    width:30%;
+    padding:20px;
    
 }
 .news_image{
@@ -26,7 +28,18 @@
 }
 .sidebar{
     width: 200px;
+    margin: 10px;
 }
-#image_long{
+#news>h2{
+    font-family: 'Playfair Display', serif; 
+}
+#news>p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#news{
+    cursor: pointer;
+}
+/* #image_long{
     height:600px;
-}
+} */
