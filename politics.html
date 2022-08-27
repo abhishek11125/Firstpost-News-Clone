@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ftr.css">
+    <style>
+     * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  #ad {
+    margin: 40px auto;
+    width: 40%;
+  }
+  #ad > img {
+    width: 100%;
+  }
+  #main {
+    /* border: 1px solid teal; */
+    margin: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+   
+  }
+  #left {
+    width: 65%;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .heading > span {
+    display: block;
+    margin: auto;
+    width: 15%;
+    height: 8px;
+    background-color: #fad65f;
+    font-size: 27px;
+    /* position: relative; */
+  }
+  .heading > span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 2px;
+    border-bottom: #707070 solid 1px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(112, 112, 112);
+    z-index: -1;
+  }
+  .heading > span::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    right: 50%;
+    top: 60%;
+    width: 20%;
+    height: 20px;
+    z-index: -1;
+    background-color: white;
+  }
+  .ad1 {
+    margin: 20px;
+  }
+  .ad1>img{
+    width: 100%;
+  }
+  .ad1 > a {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: black;
+    text-decoration: none;
+  }
+  #most_read>div{
+    display: flex;
+    border: 1px solid gray;
+  }
+  #most_read>div>div:first-child{
+    position: relative;
+    margin: 10px;
+    font-family: "Playfair Display", serif;
+  }
+  #most_read>div>div:first-child>span{
+    position: absolute;
+    display: flex;
+    background-color: #efefef;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    left: 2px;
+    z-index: -1;
+  }
+  #most_read>div>div:last-child{
+    padding: 10px;
+  }
+  #most_read>div>div:last-child>h3{
+    font-size: 22px;
+  }
+  #most_read>div>div:last-child>p{
+    font-size: 16px;
+  }
+  #container1{
+    margin: 10px;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  #container1>div>div:first-child{
+    cursor: pointer;
+  }
+  #container1>div>div:first-child>img{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    object-fit: contain;
+  }
+  #container1>div>div:last-child>h3{
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    padding: 5px;
+  }
+  #container1>div>div:last-child{
+    position: absolute;
+    z-index: 3;
+    margin-top: -120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #efefef;
+    cursor: pointer;
+  }
+  #container1>div>div:last-child>p{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 10px 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  #right {
+    width: 40%;
+   
+  }
+  #mr {
+    position: relative;
+    font-size: 20px;
+  }
+  #mr::before {
+    content: "MOST READ";
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    font-size: 25px;
+    opacity: 0.1;
+  }
+  #mr > span {
+    position: absolute;
+    display: block;
+    height: 0.1%;
+    width: 50%;
+    top: 18px;
+    background-color: #fad65f;
+    padding: 0.5%;
+    z-index: -1;
+  }
+  .carousel{
+    display: block;
+    margin: auto;
+    position: relative;
+    
+  }
+  
+  .carousel .images>{
+    width: 100%;
+    display: block;
+    margin:auto;
+    object-fit: contain;
+  }
+  .carousel .card{
+    margin: 20px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .owl-dots{
+    text-align: center;
+  }
+  .owl-dot{
+    height: 5px;
+    width: 45px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 5px;
+    background-color: #707070 !important;
+    transition: all 0.5 ease;
+   
+  }
+  .owl-dot.active{
+    background-color: red !important;
+  }
+  .caption{
+    width: 95%;
+    position: absolute;
+    bottom: 35px;
+    right: 10px;
+    left: 10px;
+    padding: 10px;
+    overflow: hidden;
+    background: white;
+  }
+  .caption>span{
+    background-color: #fad65f;
+    margin-top: -5px;
+    display: flex;
+    width: 8%;
+    padding: 0.4%;
+  }
+  .caption>h3{
+    font-size: 26px;
+    margin: 10px;
+    font-family: "Playfair Display", serif;
+  }
+  .carousel2{
+    margin: 10px;
+  }
+  .cd img{
+    position: relative;
+  }
+  .cap{
+    position: absolute;
+    bottom: 0px;
+    background:white;
+  }
+  .cap>span{
+    background-color: #fad65f;
+    margin-top: -5px;
+    display: flex;
+    width: 8%;
+    padding: 0.4%;
+  }
+  .cap>p{
+    margin: 5px;
+  }
+  .cd{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .carousel2 .cd img{
+    height: 300px;
+    object-fit: cover;
+  }
+  #container2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    margin: 10px;
+    
+  }
+  #container2>div{
+    display: flex;
+    border-bottom: 1px solid;
+    padding: 10px;
+    cursor: pointer;
+  }
+  #container2>div>img{
+    width: 50%;
+    object-fit: contain;
+  }
+  #container2>div>p{
+    font-size: 14px;
+    font-family: "Playfair Display", serif;
+    margin-left: 20px;
+  
+  }
+  #extra{
+    font-family: 'Playfair Display', serif;
+    padding: 10px;
+  }
+  #extra>img{
+    width: 100%;
+  }
+  #ex{
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+  }
+  .carousel2 .cd1>img{
+    height: 200px;
+    object-fit: cover;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .cap{
+    height: 100px;
+  }
+  .cap>h5{
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+  }
+  #container3{
+    margin: 10px;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  #container3>div:first-child{
+    cursor: pointer;
+  }
+  #container3>div>div:first-child>img{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    object-fit: contain;
+  }
+  #container3>div>div:last-child>h3{
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    padding: 5px;
+  }
+  #container3>div>div:last-child{
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    margin-top: -120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #efefef;
+    cursor: pointer;
+  }
+  #container3>div>div:last-child>p{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 10px 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  #container4{
+    margin: 10px;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  #container4>div:first-child{
+    cursor: pointer;
+  }
+  #container4>div>div:first-child>img{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    object-fit: contain;
+  }
+  #container4>div>div:last-child>h3{
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    padding: 5px;
+  }
+  #container4>div>div:last-child{
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    margin-top: -120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #efefef;
+    cursor: pointer;
+  }
+  #container4>div>div:last-child>p{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 10px 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    width: 90%;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 5px;
+    width: 20px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 5%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: red;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+
+h1 {
+    margin-left: 160px;
+    margin-bottom: 5px;
+}
+
+#second {
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+    width: 97%;
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+h2>a{
+    text-decoration: none;
+    color: black;
+}
+
+#politics_line {
+   
+    width: 100%;
+    margin-left: 250px;
+    height: 2px;
+    background-color: #585858;
+}
+
+     .text-block {
+   
+    width: 98%;
+    height: 120px;
+    position: absolute;
+    font-size: 14px;
+    bottom: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+} 
+    </style>
+</head>
+
+<body>
+     <!-- header navbar -->
+
+     <div id="container">
+        <div id="navbar"></div>
+  
+        <!-- sidebar starts  -->
+        <div id="sidemenu"></div>
+        <!-- sidebar ends  -->
+  
+        <!-- categoty navbar -->
+        <div id="category"></div>
+        <!-- categoty navbar -->
+  
+        <!-- header navbar -->
+      </div>
+    <div id="ad">
+        <img src="https://tpc.googlesyndication.com/simgad/15890087200285671136" alt="ad1" />
+    </div>
+
+    <div id="main">
+        <div id="left">
+            <h1 class="heading">
+                POLITICS NEWS
+                <span></span>
+            </h1>
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <img
+                        src="https://images.firstpost.com/wp-content/uploads/fpranking/1661493455235.jpg?impolicy=website&width=640&height=362">
+                    <div class="text-block">
+                        <p>Politics</p>
+                        <h2>'Expiation only if wicked people are bid goodbye': Telangana CM slams Centre over'divisive
+                            politics'
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img
+                        src="https://images.firstpost.com/wp-content/uploads/fpranking/1661455117654.jpg?impolicy=website&width=640&height=362">
+                    <div class="text-block">
+                        <p>Politics</p>
+                        <h2>Maharashtra: Shiv Sena factions target each other in Vidhan Bhavan premises</h2>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img
+                        src="https://images.firstpost.com/wp-content/uploads/fpranking/1661455117909.jpg?impolicy=website&width=640&height=362">
+                    <div class="text-block">
+                        <p>INDIA</p>
+                        <h2>Delhi govt to launch '15-point action plan' in October to fight air pollution in winter</h2>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img
+                        src="https://images.firstpost.com/wp-content/uploads/fpranking/1661455117497.jpg?impolicy=website&width=640&height=362">
+                    <div class="text-block">
+                        <p>INDIA</p>
+                        <h2>Bharat Jodo Yatra: Rahul Gandhi to meet people from various sections of society</h2>
+                    </div>
+                </div>
+
+
+            </div>
+            <br>
+
+            <div style="margin-left: 250px;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="slideshow-container">
+                <img src="https://images.firstpost.com/wp-content/uploads/2022/08/Azad640.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">Ghulam Nabi Azad quits Congress, blames Rahul for demolishing consultative mechanism
+                            in party</a> </h2>
+                    <p>Congress leader Ghulam Nabi Azad on Thursday severed all ties with the Congress, calling out
+                        Rahul Gandhi
+                        as a “non-serious and an immature individual”.</p>
+                </div>
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/Bishnoi640.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">Can persuade Ghulam Nabi Azad to join BJP if party asks me, says Kuldeep Bishnoi</a>
+                    </h2>
+                    <p>'It won't be wrong to say that Congress is in self-destruction, suicidal mode. I suggest Rahul
+                        Gandhi
+                        sets aside his ego....,' Bishnoi said.</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/07/Kejriwal-new13.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">AAP promises free medical treatment if voted to power in HP Assembly polls</a></h2>
+                    <p>On Thursday, Punjab Chief Minister Bhagwant Mann and Delhi Deputy CM Manish Sisodia while
+                        addressing a
+                        public meeting in Una district said if voted to power, the AAP government will provide fee
+                        medicines and
+                        tests</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/Owaisi640-1.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">Situation in Hyderabad direct result of Raja Singh's 'hate speech', says Asaduddin
+                            Owaisi</a></h2>
+                    <p>Demanding the arrest of suspended BJP MLA T Raja Singh, AIMIM chief on Thursday said protests in
+                        some
+                        parts of the city were a direct result of the alleged hate speech by the saffron party leader.
+                    </p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/modi-1.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">Prime Modi tops approval rating of world leaders; what about Joe Biden, Boris
+                            Johnson and Emmanuel
+                            Macron?</a></h2>
+                    <p>A survey conducted by American research company Morning Consult reveals that Prime Minister
+                        Narendra Modi
+                        enjoys a 75 per cent approval rating, the highest for any world leader. Joe Biden has a 41 per
+                        cent
+                        approval rate and Boris Johnson places third last with 25 per cent</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/BJP-Congress1.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">National parties collected Rs 15,077 crore from unknown sources between 2004-05 and
+                            2020-21</a></h2>
+                    <p>'The total income of national and regional parties from unknown sources for 2020-21 stands at Rs
+                        690.67
+                        crore. ADR considered eight national parties and 27 regional parties for this analysis.</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/Congress1-1.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">Ghulam Nabi Azad’s resignation: Miasma of animosity and cynicism swamps Congress</a>
+                    </h2>
+                    <p>The latest hammer blow has come from its old guard represented by none other than Ghulam Nabi
+                        Azad, 73.
+                        After quitting the Congress, he has blamed Rahul Gandhi for the downslide</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/146647-msuerfvmgc-1598590461-2.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">‘Kaan ka kachcha’ to ‘more interested in his dog’: Who said what about Rahul Gandhi
+                            when they left
+                            Congress?</a></h2>
+                    <p>Several high-profile old loyalists of the Grand Old party have taken flight, some to join the
+                        saffron
+                        fold. The latest in the long litany is veteran Ghulam Nabi Azad</p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/08/azad4.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">The many body blows to the Congress: Ghulam Nabi Azad and other prominent leaders
+                            who quit the party
+                            this year</a></h2>
+                    <p>The year 2022 has been especially hard for the Congress. Multiple leaders have quit, signalling
+                        all is
+                        not well within the party. This comes as a huge blow to Congress while it prepares for the
+                        upcoming
+                        Gujarat and Himachal Pradesh Assembly polls as well as the general elections in two years' time
+                    </p>
+                </div>
+
+                <img style="margin-top:200px;"
+                    src="https://images.firstpost.com/wp-content/uploads/2022/07/Mamata-Banerjee11.jpg?impolicy=website&width=640&height=362"
+                    alt="">
+                <div id="second">
+                    <p>POLITICS</p>
+                    <h2><a href="#">GhoseSpot | Desperately seeking an economic renaissance, Bengal awaits Godot</a>
+                    </h2>
+                    <p>Once one of the most developed and prosperous states, the rest of India has left it far behind.
+                        West
+                        Bengal must rise again</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="right">
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="ad1" />
+            </div>
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="ad1" />
+            </div>
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="ad1" />
+            </div>
+            <h3 id="mr">
+                MOST READ
+                <span></span>
+            </h3>
+            <div id="most_read"></div>
+            <div class="ad1">
+                <a href="#">#Powering Life: A CSR Initiative By Volvo</a>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/9VqjcpCbbk8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/10143487357879266797" alt="ad1" />
+            </div>
+            <div class="ad1">
+                <a href="#">Sanitation workers in rural Haryana unable to access ration, health
+                    care</a>
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/TvMY7lARVF0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/10143487357879266797" alt="ad1" />
+            </div>
+            <h2 id="ex">
+                You Might Also Like
+            </h2>
+            <div id="extra">
+                <p>House for Sale in Dubai Migh Be Cheaper Than You Think</p>
+                <img
+                    src="https://images.outbrainimg.com/transform/v3/eyJpdSI6IjJiOWI2MDY2N2E5ZTgyNGNhMmRmYjViYTY3MDdkOWYxZWQ4ODIzNDZkMmMxNzdhYmE4ZWUyMjZiNzJiYmRlODAiLCJ3Ijo3ODAsImgiOjQ4MCwiZCI6MS41LCJjcyI6MCwiZiI6NH0.webp">
+            </div>
+            <div id="extra">
+                <p>Most Awkward Moments on Red Carpet</p>
+                <img
+                    src="https://images.outbrainimg.com/transform/v3/eyJpdSI6IjMzYzE5MmU2ZDJmZGU4MmU2ZGUzZDRhYThlN2NiNjMwMjJhYTY0OGM3OGJkMjVjNTc2Njk5YjAxOWFlNGU5NTkiLCJ3Ijo3ODAsImgiOjQ4MCwiZCI6MS41LCJjcyI6MCwiZiI6NH0.webp">
+            </div>
+            <div id="extra">
+                <p>20 Facts About The Amish The World Ignores</p>
+                <img
+                    src="https://images.outbrainimg.com/transform/v3/eyJpdSI6IjFmNTgyMTYwZDEwNDhlNGZjZDk0MDVmOWI3NDhlYjcxZjk5MDZhYWU4OGZmNTI0Y2I1NjhkY2UxMjJlZDQ2YmYiLCJ3Ijo3ODAsImgiOjQ4MCwiZCI6MS41LCJjcyI6MCwiZiI6NH0.webp">
+            </div>
+            <div id="extra">
+                <p>William And Kate Have Been Told Their Fate after Charles Finally Becomes King</p>
+                <img
+                    src="https://images.outbrainimg.com/transform/v3/eyJpdSI6ImMxNGU4NGQ5MmVkY2Q2YmFkMjdmOGZjMmE2OWE4ZTY2MzUzY2FjYmU0YmM2MGQ3NzJkNzc0MjQ3OGU3MmE1OWMiLCJ3Ijo3ODAsImgiOjQ4MCwiZCI6MS41LCJjcyI6MCwiZiI6NH0.webp">
+            </div>
+            <div class="ad1">
+                <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="ad1" />
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer_dum"></div>
+</body>
+
+</html>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+</script>
+<script src="components/ftr.js" type="module"></script>
+<script src="ftr.js" type="module"></script>
