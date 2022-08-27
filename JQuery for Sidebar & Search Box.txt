@@ -1,0 +1,28 @@
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#search').click(function(){
+            $('.menu-item').addClass('hide-item');
+            $('.search-form').addClass('active');
+            $('.close').addClass('active');
+            $('#search').hide();
+        })
+        $('.close').click(function(){
+            $('.menu-item').removeClass('hide-item');
+            $('.search-form').removeClass('active');
+            $('.close').removeClass('active');
+            $('#search').show();
+        })
+    })
+    
+    //side-bar-animation//
+    
+    setTimeout(function(){
+        document.querySelector(".sidebar .toggle-btn").addEventListener("click",function(){
+            document.querySelector(".sidebar").classList.toggle("active");
+        })
+        
+    },2000);
+
+</script>
