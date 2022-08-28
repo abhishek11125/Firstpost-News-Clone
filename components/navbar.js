@@ -36,8 +36,8 @@ function navbar(){
             </div>
 
             <!-- side bar ended -->
-
-            <div id="logo" class="menu-item"><img src="https://www.firstpost.com/static/images/fp-desk-logo.png" alt=""></div>
+            
+            <div id="logo" class="menu-item"><a href="index.html"><img src="https://www.firstpost.com/static/images/fp-desk-logo.png" alt=""></a></div>
             <div id="comp-logo" class="menu-item">
                 <a href="https://www.facebook.com/firstpostin"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com/firstpost"><i class="fab fa-twitter"></i></a>

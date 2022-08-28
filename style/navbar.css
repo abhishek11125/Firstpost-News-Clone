@@ -253,7 +253,7 @@ a{
 
 .sidebar{
     position: fixed;
-    top: -15px;
+    top: -5px;
     left:-250px;
     width: 230px;
     border: 1px solid black;
