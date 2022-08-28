@@ -1,10 +1,11 @@
 let getData= async()=>{
-  // let res=await fetch(`https://newsapi.org/v2/everything?q=india&from=2022-07-27&sortBy=publishedAt&pagesize=10&apiKey=2b7bcb9907d246cd8cfbabb9967e29e1`);
+   let res=await fetch(`https://newsapi.org/v2/everything?q=india&from=2022-07-28&sortBy=publishedAt&apiKey=390ea7d323fe4cae8555e826371d2f0d&pagesize=10`);
   let data=await res.json();
   data=data.articles;
   console.log(data);
   append(data);
   append_most_read(data);
+  // https://newsapi.org/v2/everything?q=india&from=2022-07-28&sortBy=publishedAt&apiKey=390ea7d323fe4cae8555e826371d2f0d&pagesize=10
 }
 getData();
 
@@ -15,6 +16,7 @@ let append=(data)=>{
       let div=document.createElement("div");
       div.addEventListener("click",function(){
         localStorage.setItem("news",JSON.stringify(el));
+        window.location.href = 'news.html';
       })
       let image=document.createElement("img");
       image.className="news_image";
@@ -74,3 +76,11 @@ display_crausel();
 
 // 390ea7d323fe4cae8555e826371d2f0d
 // https://newsapi.org/v2/everything?q=india&from=2022-07-27&sortBy=publishedAt&pagesize=10&apiKey=2b7bcb9907d246cd8cfbabb9967e29e1
+
+import { navbar } from "../components/navbar.js";
+
+document.getElementById('navbar').innerHTML = navbar();
+
+import { footer } from "../components/footer.js";
+
+document.getElementById('footer').innerHTML = footer();

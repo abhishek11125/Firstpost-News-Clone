@@ -13,7 +13,7 @@
 }
 
 #footer{
-    width: 70%;
+    width: 90%;
     margin: auto;
     margin-top:10px;
 }
@@ -31,7 +31,9 @@
     display: flex;
     gap: 12px;
 }
-
+#comp-logo>a>i{
+    width: 100%;
+}
 .fab{
     padding-left: 5px;
     padding-right: 5px;
@@ -86,7 +88,7 @@
 .footer-column>p{
     display: flex;
     line-height: 24px;
-    margin-left: -30px;
+    margin-left: 15px;
     font-size: 13px;
 }
 

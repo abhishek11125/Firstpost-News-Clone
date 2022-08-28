@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
       rel="stylesheet"
@@ -190,7 +192,7 @@
               </div>
             </div>
           </div>
-          </div>
+          </div>  
         <div id="container4">
 
         </div>
@@ -287,7 +289,15 @@
     </div>
     <div id="footer"></div>
   </body>
-  <script src="./script/index.js" type="module"></script>
+  <script src="./script/index.js"></script>
+  <script type="module">
+    import {navbar} from './components/navbar.js'
+    document.getElementById('navbar').innerHTML = navbar()
+
+    import {footer} from './components/footer.js'
+
+    document.getElementById('footer').innerHTML = footer()  
+  </script>
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -303,4 +313,30 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#search').click(function(){
+            $('.menu-item').addClass('hide-item');
+            $('.search-form').addClass('active');
+            $('.close').addClass('active');
+            $('#search').hide();
+        })
+        $('.close').click(function(){
+            $('.menu-item').removeClass('hide-item');
+            $('.search-form').removeClass('active');
+            $('.close').removeClass('active');
+            $('#search').show();
+        })
+    })
+    
+    setTimeout(function(){
+        document.querySelector(".sidebar .toggle-btn").addEventListener("click",function(){
+            document.querySelector(".sidebar").classList.toggle("active");
+        })
+        
+    },2000);
+
+</script>
 </html>

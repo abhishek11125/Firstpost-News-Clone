@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
@@ -29,25 +32,50 @@
             <div id="news"></div>
         </div>
      <div id="side">
-        <div class="sidebar">
+        <div class="sidebar_india">
          <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="not">
          </div>
-         <div class="sidebar">
+         <div class="sidebar_india">
             <img src="https://tpc.googlesyndication.com/simgad/7755671468346832423" alt="not">
             </div>
          <div id="most_read"></div>
          
-       <div class="sidebar">
+       <div class="sidebar_india" id="last_one">
         <img src="https://tpc.googlesyndication.com/simgad/13654732246111580258" alt="not">
        </div>
-       <div id="image_long">
-        <img src="https://s.hcurvecdn.com/aprimeauto/shamapfrdm/300x600/copy.png" alt="not">
        </div>
        </div>
-      
-       
-       </div>
+       <div id="footer"></div>
     
 </body>
 </html>
-<script src="scripts/india.js"></script>
+<script src="scripts/india.js" type="module"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#search').click(function(){
+            $('.menu-item').addClass('hide-item');
+            $('.search-form').addClass('active');
+            $('.close').addClass('active');
+            $('#search').hide();
+        })
+        $('.close').click(function(){
+            $('.menu-item').removeClass('hide-item');
+            $('.search-form').removeClass('active');
+            $('.close').removeClass('active');
+            $('#search').show();
+        })
+    })
+    
+    //side-bar-animation//
+    
+    setTimeout(function(){
+        document.querySelector(".sidebar .toggle-btn").addEventListener("click",function(){
+            document.querySelector(".sidebar").classList.toggle("active");
+        })
+        
+    },2000);
+
+</script>

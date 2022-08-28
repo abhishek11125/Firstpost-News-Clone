@@ -14,11 +14,11 @@ function navbar(){
                 <div class="links">
                     <!-- <a href="#" style="padding: 22px;"></a> -->
                     <h1 id="cross-mark"></h1>
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="#">Health</a>
-                    <a href="#">India</a>
-                    <a href="#">Politics</a>
-                    <a href="#">Art & Culture</a>
+                    <a href="india.html">India</a>
+                    <a href="politics.html">Politics</a>
+                    <a href="world.html">World</a>
                     <a href="#">Auto</a>
                     <a href="#">Opinion</a>
                     <a href="#">Sports</a>
@@ -37,7 +37,7 @@ function navbar(){
 
             <!-- side bar ended -->
 
-            <div id="logo" class="menu-item"> <img src="https://www.firstpost.com/static/images/fp-desk-logo.png" alt=""></div>
+            <div id="logo" class="menu-item"><img src="https://www.firstpost.com/static/images/fp-desk-logo.png" alt=""></div>
             <div id="comp-logo" class="menu-item">
                 <a href="https://www.facebook.com/firstpostin"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com/firstpost"><i class="fab fa-twitter"></i></a>
@@ -61,15 +61,15 @@ function navbar(){
 
     <div id="second-navbar">
         <div class="tags">
-            <a href="#">India</a>
+            <a href="india.html">India</a>
         </div>
         <div class="nav-line"></div>
         <div class="tags">
-            <a href="#">World</a>
+            <a href="world.html">World</a>
         </div>
         <div class="nav-line"></div>
         <div class="tags">
-            <a href="#">Politics</a>
+            <a href="politics.html">Politics</a>
         </div>
         <div class="nav-line"></div>
         <div class="tags">

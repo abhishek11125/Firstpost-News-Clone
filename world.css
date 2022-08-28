@@ -1,3 +1,8 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 #topmost{
 display: flex;
 margin: auto;
@@ -58,9 +63,7 @@ input{
     width: 266.88px;
     height: 33px;
 }
-/* #most_read{
-    
-} */
+
 
 
 #news1{
@@ -113,10 +116,7 @@ input{
     width:262px;
     margin-left:38px;
 }
-/* #heading{
 
-    font-size: 18px;
-} */
 #bottom_img{
     margin-top: 90px;
     width: fit-content;
@@ -169,5 +169,4 @@ margin-top: 5px;
 #bottom_ad>div>img{
     width: 100%;
 }
-
 
