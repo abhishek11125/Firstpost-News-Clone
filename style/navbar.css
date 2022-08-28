@@ -124,6 +124,7 @@ a{
     align-items: center;
     gap: 20px;
     margin-left: 22px;
+    font-weight: bolder;
 }
 
 .right-side-bar p:nth-child(1){
@@ -135,8 +136,12 @@ a{
     padding-right: 5px;
 }
 
-.right-side-bar img{
-    width: 30%;
+/* .right-side-bar a:nth-child(2){
+    color: black;
+} */
+
+.right-side-bar a img{
+    width: 80%;
     height: 30px;
 }
 

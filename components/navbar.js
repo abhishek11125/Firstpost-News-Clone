@@ -39,10 +39,10 @@ function navbar(){
 
             <div id="logo" class="menu-item"> <img src="https://www.firstpost.com/static/images/fp-desk-logo.png" alt=""></div>
             <div id="comp-logo" class="menu-item">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.facebook.com/firstpostin"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/firstpost"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/firstpost/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCz8QaiQxApLq8sLNcszYyJw/featured"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div id="line" class="menu-item"></div>
             <div id="search"><i class=" fa fa-search"></i></div>
@@ -101,11 +101,12 @@ function navbar(){
         </div>
         <div class="nav-line-2"></div>
         <div class="right-side-bar">
-            <p>Crypto</p>
-            <p>Asia Cup 2022</p>
-            <img src="https://www.firstpost.com/static/images/netrasuraksha_L2_103x25px.jpg" alt="">
+            <p><a href="#" style="color:white;">Crypto </a></p>
+            <p><a href="#">Asia Cup 2022</a></p>
+            <a href="#"><img src="https://www.firstpost.com/static/images/netrasuraksha_L2_103x25px.jpg" alt=""></a>
         </div>
-    </div>`
+    </div>
+</div>`
 }
 
 export {navbar}
