@@ -1,0 +1,173 @@
+#topmost{
+display: flex;
+margin: auto;
+}
+p{
+    margin-left: 100px;
+    font: 16px;
+    font-style: Arial,sans-serif;
+}
+#center_content{
+    display: flex;
+    margin: auto;
+}
+#news{
+    width: 640px;
+    margin-right: 10px;
+    margin-left: 200px;
+    margin-bottom: 15px;
+    
+}
+#side_content{
+    width:300px;
+    height: 233.33px;
+    
+}
+#side_tp_img>img{
+    width: 100%;
+}
+#subscribe{
+    height: auto;
+}
+#subscribe>h2{
+    margin-top: 60px;
+    font-size: 19.6px;
+    font-style: Helvetica,Arial,sans-serif;
+    height: auto;
+}
+#subscribe>p{
+    color: #A7A4A4;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+button{
+    margin-top:10px ;
+    width: 110px;
+    height: 32px;
+    background-color: #FAD65F;
+    padding: 0px 22px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: white;
+}
+
+input{
+    margin-top: 10px;
+    width: 266.88px;
+    height: 33px;
+}
+/* #most_read{
+    
+} */
+
+
+#news1{
+    display: flex;
+    border: none;
+}
+#news1>div{
+   
+    height:fit-content;
+}
+.content>p{
+    margin-left: -0px;
+}
+#news2{
+    display: flex;
+}
+#news2>div{
+    
+    height:fit-content;
+}#news3{
+    display: flex;
+}
+#news3>div{
+    
+    height:fit-content;
+}
+#news4{
+    display: flex;
+
+}
+#news4>div{
+    
+    height:fit-content;
+}
+#news5{
+    display: flex;
+}
+#news5>div{
+    
+    height:fit-content;
+}
+.num{
+    margin: 0px 10px;
+}
+#after_read>img{
+    width: 262px;
+    margin-left:38px;   
+}
+#secound_img>img{
+    width:262px;
+    margin-left:38px;
+}
+/* #heading{
+
+    font-size: 18px;
+} */
+#bottom_img{
+    margin-top: 90px;
+    width: fit-content;
+    margin-left: 300px;
+    
+}
+#news>div>img{
+    width: 640px;
+}
+#news>div>h3{
+    font-size: 24px;
+    font-family: 'Playfair Display,sans-serif';
+}
+#news>div>p{
+    margin-left: 0px;
+    margin: 10px 0px;
+}
+#news>div{
+    margin-bottom: 10px;
+}
+#you{
+    color: #515150;
+    font-size: 16px;
+    font-family:'Open sans',sans-serif;
+    margin-left:190px;
+    font-style: bold;
+}
+#line{
+border: 1px solid teal;
+width: 640px;
+margin-left:189px;
+margin-top: 5px;
+}
+#bottom_ad{
+    display: flex;
+    margin-left: 189px;
+    margin-top: 20px;
+}
+#bottom_ad>div{
+    width:203.52px ;
+    height:135.67px ;
+    margin-right: 15px;
+}
+#bottom_ad>div>p{
+    font-size: 16px;
+    font-family: 'Frank Ruhl Libre Geogia,serif';
+    margin: 6px 0px 0px;
+    color: #222222;
+}
+#bottom_ad>div>img{
+    width: 100%;
+}
+
+
