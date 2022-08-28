@@ -36,10 +36,10 @@ function footer(){
         <div id="col-line"></div>
         <div class="footer-column">
             <p>Section</p>
-            <p><a href="#">Front Page</a></p>
-            <p><a href="#">Politics</a></p>
+            <p><a href="index.html">Front Page</a></p>
+            <p><a href="politics.html">Politics</a></p>
             <p><a href="#">Sports</a></p>
-            <p><a href="#">World</a></p>
+            <p><a href="world.html">World</a></p>
             <p><a href="#">Business</a></p>
             <p><a href="#">Entertainment News</a></p>
             <p><a href="#">Cricket</a></p>
@@ -83,12 +83,12 @@ function footer(){
         <p id="head-house">NetWork18 Sites</p>
         <p id="arrow"></p>
 
-        <p><a href="#">Moneycontrol</a></p>
-        <p><a href="#">News18</a></p>
-        <p><a href="#">CNBC18</a></p>
-        <p><a href="#">Overdrive</a></p>
-        <p><a href="#">Forbes India</a></p>
-        <p><a href="#">TopperLearning</a></p>
+        <p><a href="https://www.moneycontrol.com/promo/mc_interstitial_dfp.php?size=1280x540">Moneycontrol</a></p>
+        <p><a href="https://www.news18.com/">News18</a></p>
+        <p><a href="https://www.cnbctv18.com/">CNBC18</a></p>
+        <p><a href="https://www.overdrive.in/">Overdrive</a></p>
+        <p><a href="https://www.forbesindia.com/">Forbes India</a></p>
+        <p><a href="https://www.topperlearning.com/">TopperLearning</a></p>
     </div>
 
     <div class="col-line-4"></div>
