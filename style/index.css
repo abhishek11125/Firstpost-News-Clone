@@ -11,13 +11,11 @@
   width: 100%;
 }
 #main {
-  /* border: 1px solid teal; */
   margin: auto;
   width: 70%;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  border: 1px solid red;
 }
 #left {
   width: 65%;
@@ -39,7 +37,6 @@
   height: 8px;
   background-color: #fad65f;
   font-size: 27px;
-  /* position: relative; */
 }
 .heading > span::before {
   content: "";
@@ -143,7 +140,6 @@
 }
 #right {
   width: 40%;
-  border: 1px solid teal;
 }
 #mr {
   position: relative;
